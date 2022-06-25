@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+        
+        @media screen and (max-width:355px)
+        {
+        body{
+            background-image: url("bg-intro-mobile.png");
+        }
+    }
+        .background{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            background-image: url(./bg-intro-desktop.png);
+            background-size: cover;        
+            position: relative;
+            margin: 0 auto; 
+        }
+        .background::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(255,122,122,0.80);
+        } 
+        .container{
+            display: inherit;
+            z-index: 0;
+            margin:100px;
+        }
+        
+        .section1{
+            flex-wrap: wrap;
+            padding:20px;
+            color: white;
+        } 
+
+        .section2{
+            padding:20px;
+        }
+  
+        h1{
+            font-weight: 700;
+            font-size: 50px;
+        }
+        .trial{
+            width: 90%;
+            margin: 20px auto;
+            text-align: center;
+            background-color: hsl(248, 32%, 49%) ;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+        }
+        .form{
+            background-color: white;
+            width: 90%;
+            padding: 20px;
+            margin: 20px auto;
+            border: none;
+            border-radius:5px;
+        }
+        .form input{
+            width: 90%;
+            margin: 10px;
+            padding: 15px;
+            border: 1px hsl(246, 25%, 77%) solid;
+            border-radius: 5px;
+        }
+        form input:focus{
+            border:1px hsl(246, 25%, 77%) solid; 
+        }
+
+        .form input[type="submit"]{
+            width: 97%;
+            background-color:hsl(154, 59%, 51%);
+            border: none;
+            color:white;
+            font-size: 500;
+        }
+          
+    </style>
+</head>
+<body>
+    <div class="background"> 
+        <div class="container">            
+            <section class="section1">
+                <aside>
+                <h1>Learn to code by watching others</h1>
+                <p>See how experienced evelopers solve problems in real-time. Watching scripted tutprials is great but understanding how developers think is invaluable.</p>
+                </aside>
+            </section>
+            <section class="section2">
+                <div class="trial">
+                    <p><strong>Try it free 7 days</strong> then 20$/mo. thereafter</p>
+                </div>
+                <form class="form" action="#">
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last name" required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" title="" required >
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <input type="submit" value="CLAIM YOUR FREE TRIAL" >
+                    <p style="font-size:x-small; text-align: center; margin-top: 5px; color:hsl(246, 25%, 77%)">By clicking the button you are agreeing to our <span style="color: red;">Terms and Services</span></p>
+                </form>
+            </section>
+        </div>
+        </div>
+        </div>
+</body>
+</html>
