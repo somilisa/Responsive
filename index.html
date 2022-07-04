@@ -17,14 +17,6 @@
             font-size: 16px;
         }
         
-        @media screen and (max-width:385px)
-        {
-        .container{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-        }
-        }
         .background{
             min-height: 100vh;
             width: 100%;
@@ -50,6 +42,9 @@
             display: inherit;
             z-index: 0;
             margin:100px;
+            max-width: 900px;
+            gap: 20px;
+        
         }
         
         .section1{
@@ -79,16 +74,18 @@
             background-color: white;
             /*width: 90%;*/
             padding: 20px;
+            
             margin: 20px auto;
             border: none;
             border-radius:5px;
         }
         .form input{
-            width: 90%;
-            margin: 10px;
+            width: 100%;
+            margin: 10px 0;
             padding: 15px;
             border: 1px hsl(246, 25%, 77%) solid;
             border-radius: 5px;
+            box-sizing: border-box;
         }
         form input:focus{
             border:1px hsl(246, 25%, 77%) solid; 
@@ -102,6 +99,15 @@
         }
         .form input:hover{
             cursor: pointer;
+        }
+        @media screen and (max-width:385px)
+        {
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 32px;
+        }
         }
           
     </style>
